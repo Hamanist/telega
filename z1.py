@@ -28,5 +28,8 @@ def all_eq(lst):
         new_list.append(str_lst)
     return new_list
 
+def all_eq_1(lst: list) -> list:
+    max_len = len(max(lst, key=len))
+    return [item.ljust(max_len, '_') for item in lst]
 
 print(all_eq(['qweasdqweas', 'q', 'rteww', 'ewqqqqq']))
